@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const renderContent = () => {
     if (!data) return <h1>Loading...</h1>;
     if (error) return <h1>Failed to load</h1>;
-    return <BarChart data={data.results} labelX="Month" labelY="Revenue" />;
+    return <BarChart data={data.results} labelX="month" labelY="value" />;
   };
 
   return (

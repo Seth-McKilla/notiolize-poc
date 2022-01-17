@@ -1,0 +1,18 @@
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #91c483;
+}
