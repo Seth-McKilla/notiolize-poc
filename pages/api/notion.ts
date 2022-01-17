@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Client } from "@notionhq/client";
+import type { Properties } from "../../types";
 
 const { NOTION_API_KEY, NOTION_DATABASE_ID } = process.env;
 
@@ -14,11 +15,9 @@ declare const process: {
   };
 };
 
-type Property = { month: string; value: number };
-
 type Data = {
   message: string;
-  results: Property[] | null;
+  results: Properties | null;
 };
 
 export default async function handler(
@@ -37,12 +36,10 @@ export default async function handler(
       database_id: NOTION_DATABASE_ID,
     });
 
-    const results = response.results.map(
-      (result: any): Property => ({
-        month: result.properties.month.title[0].plain_text,
-        value: result.properties.value.number,
-      })
-    );
+    const results = response.results.map((result: any) => ({
+      month: result.properties.month.title[0].plain_text,
+      value: result.properties.value.number,
+    }));
 
     res.status(200).json({ message: "Success", results });
   } catch (error: any) {
