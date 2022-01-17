@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Welcome to Notiolize! 🙋‍♂️
+### Dead simple data visualization for Notion
+*Check out the live demo here 👉 https://notiolize.notion.site/Data-Viz-a5bec6ca709142199c92503b3dcce173!*
 
-## Getting Started
+![Notiolize](https://user-images.githubusercontent.com/63591760/149818667-b34765cd-f8a7-4bf0-b8d8-866771104a01.gif)
 
-First, run the development server:
+### This repo serves as a minimal template to create your own custom data visualizations within Notion by utilizing the Notion API, NextJS, Vercel, and ReCharts. To get up and running, simply follow these steps...
 
+### 1. Create an app using this repo as the template:
 ```bash
-npm run dev
-# or
-yarn dev
+npx create-next-app@latest -e https://github.com/Seth-McKilla/notiolize
+```
+>Note: The above command automatically downloads and installs the dependencies so no "npm install" or "yarn add" required!
+
+### 2. [Create a Notion integration](https://developers.notion.com/docs/getting-started) to obtain an API key to access the Notion API.
+>Note: Also make sure to grab the ID of the database you wish to create the visualization for.
+
+### 2. Create a .env.local file within the root directory with the following environment variables:
+```bash
+NOTION_API_KEY=<YOUR API KEY>
+NOTION_DATABASE_ID=<YOUR DATABASE ID>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Start the local development environment and customize to your liking:
+```bash
+npm run dev
+```
+>Note: The Notion data is fetched within the [api folder](./pages/api/notion.ts) and rendered through the [BarChart component](./components/BarChart/index.tsx).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 4. Deploy your app to Vercel:
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSeth-McKilla%2Fnotiolize&env=NOTION_API_KEY,NOTION_DATABASE_ID)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 5. Simple embed your live Vercel app link within Notion (see GIF above)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 6. That's all folks! If you've found value in this repo, please considering leaving a ⭐!
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
+## Resources
+To learn more about the packages used in this project, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [React Typescript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup/) - helpful tips for using Typescript with React.
+- [Notion Javascript SDK](https://github.com/makenotion/notion-sdk-js) - GitHub repo including documentation for using the Notion API JavaScript SDK.
+- [Getting Started with Recharts](https://recharts.org/en-US/guide) - get up and running with using the Recharts data visualization library.
