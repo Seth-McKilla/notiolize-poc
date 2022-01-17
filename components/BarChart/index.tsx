@@ -7,12 +7,7 @@ import {
   ResponsiveContainer,
   CartesianGrid,
   Tooltip,
-  TooltipProps,
 } from "recharts";
-import {
-  ValueType,
-  NameType,
-} from "recharts/src/component/DefaultTooltipContent";
 import type { Properties } from "../../types";
 import { toUSD, toUpperFirst, abbrNumber } from "../../utils";
 
@@ -22,11 +17,7 @@ interface Props {
   labelY: string;
 }
 
-const CustomTooltip = ({
-  active,
-  payload,
-  label,
-}: TooltipProps<ValueType, NameType>) => {
+const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     return (
       <div className={styles.container}>
