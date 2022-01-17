@@ -1,5 +1,5 @@
 # Welcome to Notiolize! 🙋‍♂️
-### Dead simple data visualization for Notion
+### Dead simple data visualization for Notion.
 *Check out the live demo here 👉 https://notiolize.notion.site/Data-Viz-a5bec6ca709142199c92503b3dcce173!*
 
 ![Notiolize](https://user-images.githubusercontent.com/63591760/149818667-b34765cd-f8a7-4bf0-b8d8-866771104a01.gif)
@@ -30,7 +30,7 @@ npm run dev
 ### 4. Deploy your app to Vercel:
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSeth-McKilla%2Fnotiolize&env=NOTION_API_KEY,NOTION_DATABASE_ID)
 
-### 5. Simple embed your live Vercel app link within Notion (see GIF above)
+### 5. Simply embed your live Vercel app link within Notion (see GIF above).
 
 ### 6. That's all folks! If you've found value in this repo, please considering leaving a ⭐!
 
