@@ -15,24 +15,24 @@ npx create-next-app@latest -e https://github.com/Seth-McKilla/notiolize
 ### 2. [Create a Notion integration](https://developers.notion.com/docs/getting-started) to obtain an API key to access the Notion API.
 >Note: Also make sure to grab the ID of the database you wish to create the visualization for.
 
-### 2. Create a .env.local file within the root directory with the following environment variables:
+### 3. Create a .env.local file within the root directory with the following environment variables:
 ```bash
 NOTION_API_KEY=<YOUR API KEY>
 NOTION_DATABASE_ID=<YOUR DATABASE ID>
 ```
 
-### 3. Start the local development environment and customize to your liking:
+### 4. Start the local development environment and customize to your liking:
 ```bash
 npm run dev
 ```
 >Note: The Notion data is fetched within the [api folder](./pages/api/notion.ts) and rendered through the [BarChart component](./components/BarChart/index.tsx).
 
-### 4. Deploy your app to Vercel:
+### 5. Deploy your app to Vercel:
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FSeth-McKilla%2Fnotiolize&env=NOTION_API_KEY,NOTION_DATABASE_ID)
 
-### 5. Simply embed your live Vercel app link within Notion (see GIF above).
+### 6. Simply embed your live Vercel app link within Notion (see GIF above).
 
-### 6. That's all folks! If you've found value in this repo, please considering leaving a ⭐!
+That's all folks! If you've found value in this repo, please considering leaving a ⭐!
 
 ## Resources
 To learn more about the packages used in this project, take a look at the following resources:
