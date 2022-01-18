@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { Client } from "@notionhq/client";
 import type { Properties } from "../../types";
+import { MONTHS } from "../../constants";
 
 const { NOTION_API_KEY, NOTION_DATABASE_ID } = process.env;
 
@@ -36,10 +37,14 @@ export default async function handler(
       database_id: NOTION_DATABASE_ID,
     });
 
-    const results = response.results.map((result: any) => ({
+    const unsortedResults = response.results.map((result: any) => ({
       month: result.properties.month.title[0].plain_text,
       value: result.properties.value.number,
     }));
+
+    const results = unsortedResults.sort((a, b) => {
+      return MONTHS.indexOf(a.month) - MONTHS.indexOf(b.month);
+    });
 
     res.status(200).json({ message: "Success", results });
   } catch (error: any) {

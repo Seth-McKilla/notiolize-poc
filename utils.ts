@@ -1,5 +1,3 @@
-import { ValueType } from "recharts/types/component/DefaultTooltipContent";
-
 export const fetcher = async (
   input: RequestInfo,
   init: RequestInit,
