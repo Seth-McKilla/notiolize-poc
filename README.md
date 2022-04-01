@@ -2,7 +2,7 @@
 ### Dead simple data visualization for Notion.
 *Check out the live demo here 👉 https://notiolize.notion.site/Data-Viz-a5bec6ca709142199c92503b3dcce173!*
 
-![Notiolize](https://user-images.githubusercontent.com/63591760/149818667-b34765cd-f8a7-4bf0-b8d8-866771104a01.gif)
+![notiolize](https://user-images.githubusercontent.com/63591760/161256930-04f101fa-daa1-4c59-9584-07fdfd77c918.gif)
 
 ### This repo serves as a minimal template to create your own custom data visualizations within Notion by utilizing the Notion API, NextJS, Vercel, and ReCharts. To get up and running, simply follow these steps...
 
